@@ -1,0 +1,83 @@
+Sure! Below is the structural view of the code provided, presented in a diagrammatic way to show the relationships between different components:
+
+```
++-----------------------------------+
+|        UserOperationApplication   |
++-----------------------------------+
+|                                   |
+|   @SpringBootApplication          |
+|   public static void main() {...} |
+|                                   |
++-----------------------------------+
+                    |
+                    V
++-----------------------------------+
+|          SpringSecurity           |
++-----------------------------------+
+|                                   |
+|   @Configuration                  |
+|   @EnableWebSecurity              |
+|   public SecurityFilterChain      |
+|   @Bean                           |
+|   public void configureGlobal()   |
+|                                   |
++-----------------------------------+
+                    |
+                    V
++-----------------------------------+
+|            AuthController         |
++-----------------------------------+
+|                                   |
+|   @Controller                     |
+|   public String home() {...}      |
+|   public String showRegistrationForm() {...} |
+|   public String registration() {...} |
+|   public String users() {...}     |
+|   public String login() {...}     |
+|                                   |
++-----------------------------------+
+    |                 |
+    V                 V
++---------------+ +-------------------+
+|  UserDto      | |   CustomUserDetailsService |
++---------------+ +-------------------+
+|               | |                      |
+| - id          | | - loadUserByUsername()   |
+| - firstName   | | - mapRolesToAuthorities() |
+| - lastName    | |                      |
+| - email       | |                      |
+| - password    | |                      |
+|               | |                      |
++---------------+ +-------------------+
+        |                       |
+        V                       V
++---------------+       +----------------------+
+|  UserController|       |    UserServiceImpl   |
++---------------+       +----------------------+
+|               |       |                      |
+| - createUser()|       | - userRepository     |
+| - getUserById()|       | - roleRepository     |
+| - updateUser()|       | - passwordEncoder    |
+| - updatePartialUser()| |                      |
+| - deleteUser()|       |                      |
+|               |       |                      |
++---------------+       +----------------------+
+```
+
+In this structural view:
+
+1. The `UserOperationApplication` class is the entry point of the Spring Boot application. It sets up the Spring Boot application and runs it.
+
+2. The `SpringSecurity` class is a configuration class for Spring Security. It defines security settings, filters, and authentication mechanisms for the application.
+
+3. The `AuthController` class is a Spring MVC controller that handles requests related to user authentication and registration. It also handles the display of views for user interactions.
+
+4. The `UserDto` class is a Data Transfer Object (DTO) that represents user data used for transferring data between layers.
+
+5. The `CustomUserDetailsService` class is a custom implementation of the Spring Security `UserDetailsService`. It loads user details from the database and maps roles to authorities for authentication and authorization.
+
+6. The `UserController` class is another Spring MVC controller that handles requests related to user CRUD operations. It interacts with the `UserService` to perform these operations.
+
+7. The `UserServiceImpl` class is the implementation of the `UserService` interface. It contains the business logic to perform CRUD operations and other user-related functionalities. It interacts with the database through the `UserRepository` and `RoleRepository` and uses the `PasswordEncoder` for password hashing.
+
+Overall, this structural view illustrates how different components of the application interact with each other to handle user operations and security. The controllers handle HTTP requests, the service layer contains the business logic, and the repositories interact with the database to perform data operations.

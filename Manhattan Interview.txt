@@ -1,0 +1,49 @@
+Manhattan 
+Interview(updated-14may2022)
+Round One:-
+1) Code To find duplicate strings from string list and print them(collection framework)
+2) set vs list
+3) arraylist vs linked list
+4) checked vs unchecked exception
+5) Synchronised Block
+6) Code to find same int elements from 2 list and return count (collection framework)
+7) Have you used multithreding in your project
+8) Are you comfortable with angular in near future.
+
+First and last round of Last call😅
+
+***********************************************************
+Interview
+first round was the technical round, interviewer is friendly, learn all basics, they may ask all type of questions. I went through reference. Good oppurtunity ,try to do well . .
+
+Interview Questions
+pseudo code more on operators or atleast one question ,java,springboot,mysql,constructor
+Answer Question
+
+******************************************************************************************************************************************
+Continue Reading
+Interview Questions
+What is a project that was successful?
+Answer Question
+Have you ever written a multithreaded code?
+Answer Question
+What coding language are you most comfortable in?
+Answer Question
+What is the difference between final, finally, and finalize?
+Answer Question
+When does Java use a Heap vs a Stack?
+Answer Question
+What is an immutable object?
+Answer Question
+Write a code using recursion where the sum of natural numbers that are a multiple of 3 or 5 are printed using numbers below 1000.
+Answer Question
+Asked a lot of information about a personal project I was proud of or found successful.
+Answer Question
+*****************************************************************************************************************************************
+Interview
+It was a easy interview and they mainly focused on basic questions of core java even the interviewer are very supportive. They started with some logical programming questions and SQL queries.
+
+Interview Questions
+write a Query of Self Join 
+
+************************************************************************************
